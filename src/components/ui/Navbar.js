@@ -24,7 +24,7 @@ export const Navbar = () => {
 
 						!user ? (
 							<li className="nav-item d-flex align-items-center">
-								<NavLink role="button" to="/sign-in" className="nav btn btn-primary">
+								<NavLink role="button" to="/sign-in" activeClassName="" className="nav btn btn-primary">
 									Sign in
 								</NavLink>
 							</li>

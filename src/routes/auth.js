@@ -29,7 +29,7 @@ export const Authentication = () => {
 		}
 	};
 
-	const login = async (username, password) => {
+	const login = async ({ username, password }) => {
 		try {
 			const response = await API_MAIN.post("authentication/login", { username, password });
 			localStorage.setItem("token", response.data.token);
@@ -49,7 +49,7 @@ export const Authentication = () => {
 		setUser(null);
 	};
 
-	const register = async (username, password, password_confirm) => {
+	const register = async ({ username, password, password_confirm }) => {
 		try {
 			const response = await API_MAIN.post("authentication/register", { username, password, password_confirm });
 			localStorage.setItem("token", response.data.token);

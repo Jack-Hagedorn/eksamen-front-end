@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "halfmoon/css/halfmoon-variables.min.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./assets/css/index.css";
 
 import App from "./App";
