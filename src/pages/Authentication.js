@@ -33,11 +33,15 @@ export const SignIn = () => {
 				<h1>Sign in</h1>
 				<form onChange={handleChange} onSubmit={handleSubmit}>
 					<div className="form-group">
-						<label htmlFor="username">Username</label>
+						<label htmlFor="username" className="required">
+							Username
+						</label>
 						<input className="form-control" type="text" required name="username" id="username" />
 					</div>
 					<div className="form-group">
-						<label htmlFor="password">Password</label>
+						<label htmlFor="password" className="required">
+							Password
+						</label>
 						<input className="form-control" type="password" required name="password" id="password" />
 					</div>
 					<div className="form-group d-flex align-items-center">
@@ -92,17 +96,23 @@ export const SignUp = () => {
 				<h1>Create your account</h1>
 				<form onChange={handleChange} onSubmit={handleSubmit}>
 					<div className="form-group">
-						<label htmlFor="username">Username</label>
+						<label htmlFor="username" className="required">
+							Username
+						</label>
 						<input className="form-control" type="text" required name="username" id="username" />
 					</div>
 					<div className="form-group">
 						<div className="form-row row-eq-spacing-sm">
 							<div className="col-sm">
-								<label htmlFor="password">Password</label>
+								<label htmlFor="password" className="required">
+									Password
+								</label>
 								<input className="form-control" type="password" required name="password" id="password" />
 							</div>
 							<div className="col-sm">
-								<label htmlFor="password_confirm">Confirm</label>
+								<label htmlFor="password_confirm" className="required">
+									Confirm
+								</label>
 								<input className="form-control" ref={refPasswordConfirm} type="password" required name="password_confirm" id="password_confirm" />
 							</div>
 						</div>
