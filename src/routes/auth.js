@@ -3,7 +3,7 @@ import { API_MAIN } from "../utils/api";
 
 export const Authentication = () => {
 	const [user, setUser] = useState(null);
-	const [isLoading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(true);
 
 	const getUser = async () => {
 		if (localStorage.getItem("token")) {
@@ -79,7 +79,7 @@ export const Authentication = () => {
 
 	return {
 		user,
-		isLoading,
+		loading,
 		login,
 		logout,
 		register,
