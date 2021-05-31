@@ -8,7 +8,7 @@ import "./assets/css/index.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ProvideAuth } from "./routes/ProvideAuth";
+import { ProvideAuth } from "./providers/ProvideAuth";
 
 ReactDOM.render(
 	<React.StrictMode>
