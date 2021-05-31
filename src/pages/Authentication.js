@@ -58,7 +58,7 @@ export const SignIn = () => {
 
 export const SignUp = () => {
 	const auth = useAuth();
-	const expectedData = ["username", "password", "password_confirm"];
+	const expectedData = ["username", "password", "passwordConfirm"];
 	const [data, setData] = useState({});
 
 	const refPasswordConfirm = useRef(null);
@@ -84,7 +84,7 @@ export const SignUp = () => {
 
 	useEffect(() => {
 		const setMatchedPasswordValidate = () => {
-			if (data.password !== data.password_confirm) refPasswordConfirm.current.setCustomValidity("Passwords do not match.");
+			if (data.password !== data.passwordConfirm) refPasswordConfirm.current.setCustomValidity("Passwords do not match.");
 			else refPasswordConfirm.current.setCustomValidity("");
 		};
 		setMatchedPasswordValidate();
@@ -113,7 +113,7 @@ export const SignUp = () => {
 								<label htmlFor="password_confirm" className="required">
 									Confirm
 								</label>
-								<input className="form-control" ref={refPasswordConfirm} type="password" required name="password_confirm" id="password_confirm" />
+								<input className="form-control" ref={refPasswordConfirm} type="password" required name="passwordConfirm" id="passwordConfirm" />
 							</div>
 						</div>
 						<p className="form-text">We recommend using 8 or more characters with a mix of letters, numbers & symbols</p>

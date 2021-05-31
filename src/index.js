@@ -9,6 +9,7 @@ import "./assets/css/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ProvideAuth } from "./providers/ProvideAuth";
+import halfmoon from "halfmoon";
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -18,6 +19,8 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById("root")
 );
+
+halfmoon.onDOMContentLoaded();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
