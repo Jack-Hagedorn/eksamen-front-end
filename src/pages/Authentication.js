@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useAuth } from "../providers/ProvideAuth";
 
 export const SignIn = () => {
 	const auth = useAuth();
+	const history = useHistory();
 	const expectedData = ["username", "password"];
 	const [data, setData] = useState({});
 
@@ -20,6 +21,7 @@ export const SignIn = () => {
 			try {
 				await auth.login(data);
 				toast("Successfully signed in.");
+				history.push("/");
 			} catch (_error) {
 				const error = _error.response?.data;
 				toast.error(error?.message || "Unknown error occured. Try again later.");
@@ -58,6 +60,7 @@ export const SignIn = () => {
 
 export const SignUp = () => {
 	const auth = useAuth();
+	const history = useHistory();
 	const expectedData = ["username", "password", "passwordConfirm"];
 	const [data, setData] = useState({});
 
@@ -75,6 +78,7 @@ export const SignUp = () => {
 			try {
 				await auth.register(data);
 				toast("Account successfully registered.");
+				history.push("/");
 			} catch (_error) {
 				const error = _error.response?.data;
 				toast.error(error?.message || "Unknown error occured. Try again later.");
