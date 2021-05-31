@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import "halfmoon/css/halfmoon-variables.min.css";
 import "react-toastify/dist/ReactToastify.css";
+import "material-icons/iconfont/material-icons.css";
 
 import "./assets/css/index.css";
 

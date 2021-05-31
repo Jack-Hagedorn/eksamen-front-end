@@ -18,8 +18,8 @@ export const Navbar = () => {
 				{displayOrUsername(user)}
 			</button>
 			<div className="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
-				<NavLink to="/user/settings" className="dropdown-item">
-					Settings
+				<NavLink to="/user/settings" className="dropdown-item d-flex align-items-center justify-content-between">
+					Settings <span class="material-icons-outlined">settings</span>
 				</NavLink>
 				<div className="dropdown-divider"></div>
 				<div className="dropdown-content">

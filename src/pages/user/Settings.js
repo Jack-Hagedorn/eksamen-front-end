@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../providers/ProvideAuth";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router";
 export const Settings = () => {
-	const history = useHistory();
 	const auth = useAuth();
 
 	const user = auth.user;
@@ -34,14 +32,18 @@ export const Settings = () => {
 				<form onSubmit={handleSubmit} onChange={handleChange}>
 					<h4>Profile</h4>
 					<div className="form-group">
-						<label htmlFor="username">Username</label>
+						<label htmlFor="username" className="required">
+							Username
+						</label>
 						<input id="username" name="username" className="form-control disabled" readOnly defaultValue={user.username} />
 					</div>
 					<div className="form-group">
 						<label htmlFor="displayName">Display name</label>
 						<input id="displayName" name="displayName" placeholder="Display name" className="form-control" defaultValue={user.displayName || ""} />
 					</div>
-					<input className="btn btn-primary btn-block" type="submit" value="Update Profile" />
+					<div className="form-group d-flex justify-content-end">
+						<input className="btn btn-primary" type="submit" value="Update Profile" />
+					</div>
 				</form>
 			</div>
 		</div>
