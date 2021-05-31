@@ -22,6 +22,15 @@ export const Navbar = () => {
 					Settings <span class="material-icons-outlined">settings</span>
 				</NavLink>
 				<div className="dropdown-divider"></div>
+				{user.roles.includes("admin") && (
+					<>
+						<NavLink to="/admin" className="dropdown-item d-flex align-items-center justify-content-between">
+							Admin
+							<span class="material-icons-outlined">admin_panel_settings</span>
+						</NavLink>
+						<div className="dropdown-divider"></div>
+					</>
+				)}
 				<div className="dropdown-content">
 					<button className="btn btn-block btn-danger" onClick={auth.logout}>
 						Sign out
