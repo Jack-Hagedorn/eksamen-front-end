@@ -13,7 +13,7 @@ export const ProtectedRoute = ({ component: Component, admin, ...rest }) => {
 						return <h1>ACCESS DENIED</h1>;
 					}
 					return <Component {...props} />;
-				} else return <Redirect to={{ pathname: "/login", state: { from: props.location } }} />;
+				} else return <Redirect to={{ pathname: "/sign-in", state: { from: props.location } }} />;
 			}}
 		/>
 	);
