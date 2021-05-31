@@ -1,5 +1,5 @@
 import { Route, Redirect } from "react-router-dom";
-import { useAuth } from "../routes/ProvideAuth";
+import { useAuth } from "../providers/ProvideAuth";
 export const ProtectedRoute = ({ component: Component, admin, ...rest }) => {
 	const auth = useAuth();
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useAuth } from "../routes/ProvideAuth";
+import { useAuth } from "../providers/ProvideAuth";
 
 export const SignIn = () => {
 	const auth = useAuth();

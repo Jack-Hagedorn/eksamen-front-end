@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useAuth } from "../../routes/ProvideAuth";
+import { useAuth } from "../../providers/ProvideAuth";
 
 export const Navbar = () => {
 	const auth = useAuth();

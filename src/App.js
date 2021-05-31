@@ -3,7 +3,7 @@ import { ToastContainer } from "react-toastify";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Navbar } from "./components/ui/Navbar";
 import { NotFound } from "./pages/errors/NotFound";
-import { useAuth } from "./routes/ProvideAuth";
+import { useAuth } from "./providers/ProvideAuth";
 import { routes } from "./routes/routes";
 
 const App = () => {
