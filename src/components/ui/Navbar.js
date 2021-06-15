@@ -26,7 +26,7 @@ export const Navbar = () => {
 					<>
 						<NavLink to="/admin" className="dropdown-item d-flex align-items-center justify-content-between">
 							Admin
-							<span class="material-icons-outlined">admin_panel_settings</span>
+							<span className="material-icons-outlined">admin_panel_settings</span>
 						</NavLink>
 						<div className="dropdown-divider"></div>
 					</>
