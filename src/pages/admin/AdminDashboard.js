@@ -56,15 +56,15 @@ export const AdminDashboard = () => {
 		setFormData2({ ...formData2, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit2 = async (e) => {
+	const handleSubmit2 = (e) => {
 		e.preventDefault();
-		await fetch('https://hagedorn.live/Eksamen/api/project/' + formData2.projectid, {
+		fetch('https://hagedorn.live/Eksamen/api/project/' + formData2.projectid, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				developerid: formData2.developerid
+				id: String(formData2.developerid)
 			})
 		}).then(res => {
 			return res.json()
